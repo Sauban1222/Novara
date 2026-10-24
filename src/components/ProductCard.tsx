@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowUpRight, ShoppingBag } from 'lucide-react'
-import { useCart } from '../hooks/useCart.js'
-import { formatPrice } from '../utils/formatPrice.js'
-import ImageWithFallback from './ImageWithFallback.jsx'
+import { useCart } from '../hooks/useCart'
+import { formatPrice } from '../utils/formatPrice'
+import ImageWithFallback from './ImageWithFallback'
 import './ProductCard.css'
 
 export default function ProductCard({ product }) {

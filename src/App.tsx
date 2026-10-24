@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom'
-import Navbar from './components/Navbar.jsx'
-import Footer from './components/Footer.jsx'
-import Home from './pages/Home.jsx'
-import ProductDetails from './pages/ProductDetails.jsx'
-import Cart from './pages/Cart.jsx'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import ProductDetails from './pages/ProductDetails'
+import Cart from './pages/Cart'
 import './App.css'
 
 function AnnouncementBar() {

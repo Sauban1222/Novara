@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowDown, ArrowRight } from 'lucide-react'
-import ImageWithFallback from './ImageWithFallback.jsx'
+import ImageWithFallback from './ImageWithFallback'
 import './Hero.css'
 
 export default function Hero() {

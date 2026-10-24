@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
-import { products } from '../data/products.js'
-import { normalizeCart } from '../utils/cart.js'
+import { products } from '../data/products'
+import { normalizeCart } from '../utils/cart'
 
 const CartContext = createContext(null)
 const STORAGE_KEY = 'novara-cart'

@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft, Check, Minus, Plus, ShoppingBag } from 'lucide-react'
-import { products } from '../data/products.js'
-import { useCart } from '../hooks/useCart.js'
-import { formatPrice } from '../utils/formatPrice.js'
-import ImageWithFallback from '../components/ImageWithFallback.jsx'
+import { products } from '../data/products'
+import { useCart } from '../hooks/useCart'
+import { formatPrice } from '../utils/formatPrice'
+import ImageWithFallback from '../components/ImageWithFallback'
 import './ProductDetails.css'
 
 export default function ProductDetails() {

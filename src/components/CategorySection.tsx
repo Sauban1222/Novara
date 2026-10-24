@@ -1,6 +1,6 @@
 import { ArrowUpRight } from 'lucide-react'
-import { categories, categoryImages } from '../data/products.js'
-import ImageWithFallback from './ImageWithFallback.jsx'
+import { categories, categoryImages } from '../data/products'
+import ImageWithFallback from './ImageWithFallback'
 import './CategorySection.css'
 
 export default function CategorySection({ activeCategory, onSelectCategory }) {

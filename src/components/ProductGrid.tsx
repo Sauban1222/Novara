@@ -1,4 +1,4 @@
-import ProductCard from './ProductCard.jsx'
+import ProductCard from './ProductCard'
 import './ProductGrid.css'
 
 export default function ProductGrid({ products, emptyTitle = 'No pieces found', emptyMessage = 'Try adjusting your search or filters to discover more of the collection.', onClear }) {

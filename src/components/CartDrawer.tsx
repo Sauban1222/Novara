@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Minus, Plus, X } from 'lucide-react'
-import { useCart } from '../hooks/useCart.js'
-import { formatPrice } from '../utils/formatPrice.js'
-import ImageWithFallback from './ImageWithFallback.jsx'
+import { useCart } from '../hooks/useCart'
+import { formatPrice } from '../utils/formatPrice'
+import ImageWithFallback from './ImageWithFallback'
 import './CartDrawer.css'
 
 export default function CartDrawer({ open, onClose }) {

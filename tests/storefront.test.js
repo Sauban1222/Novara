@@ -1,9 +1,9 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { products } from '../src/data/products.js'
-import { normalizeCart } from '../src/utils/cart.js'
-import { validateCheckoutForm } from '../src/utils/checkout.js'
-import { filterProducts } from '../src/utils/storefront.js'
+import { products } from '../src/data/products'
+import { normalizeCart } from '../src/utils/cart'
+import { validateCheckoutForm } from '../src/utils/checkout'
+import { filterProducts } from '../src/utils/storefront'
 
 test('search, category, price, and sort filters compose', () => {
   const results = filterProducts(products, {

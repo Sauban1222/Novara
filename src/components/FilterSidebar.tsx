@@ -1,5 +1,5 @@
 import { Search, X } from 'lucide-react'
-import { categories } from '../data/products.js'
+import { categories } from '../data/products'
 import './FilterSidebar.css'
 
 export default function FilterSidebar({ search, setSearch, category, setCategory, minPrice, setMinPrice, maxPrice, setMaxPrice, sort, setSort, newOnly, setNewOnly, saleOnly, setSaleOnly, invalidRange, onClear, resultCount }) {

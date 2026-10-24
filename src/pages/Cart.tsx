@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, CircleCheck, Minus, Plus, Trash2 } from 'lucide-react'
-import { useCart } from '../hooks/useCart.js'
-import { formatPrice } from '../utils/formatPrice.js'
-import { validateCheckoutForm } from '../utils/checkout.js'
-import ImageWithFallback from '../components/ImageWithFallback.jsx'
+import { useCart } from '../hooks/useCart'
+import { formatPrice } from '../utils/formatPrice'
+import { validateCheckoutForm } from '../utils/checkout'
+import ImageWithFallback from '../components/ImageWithFallback'
 import './Cart.css'
 
 const initialForm = { fullName: '', email: '', address: '', city: '', postalCode: '' }

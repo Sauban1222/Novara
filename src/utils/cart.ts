@@ -1,4 +1,4 @@
-import { products } from '../data/products.js'
+import { products } from '../data/products'
 
 export function normalizeCart(value, catalog = products) {
   if (!Array.isArray(value)) {

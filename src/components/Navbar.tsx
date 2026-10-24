@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Menu, Search, ShoppingBag, X } from 'lucide-react'
-import { useCart } from '../hooks/useCart.js'
-import CartDrawer from './CartDrawer.jsx'
+import { useCart } from '../hooks/useCart'
+import CartDrawer from './CartDrawer'
 import './Navbar.css'
 
 export default function Navbar() {

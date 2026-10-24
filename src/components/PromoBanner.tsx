@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import ImageWithFallback from './ImageWithFallback.jsx'
+import ImageWithFallback from './ImageWithFallback'
 import './PromoBanner.css'
 
 export default function PromoBanner() {
