@@ -1,0 +1,14 @@
+.image-fallback {
+  display: flex;
+  min-height: 180px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  background: #eeece6;
+  color: #777;
+  font-family: var(--font-serif);
+  letter-spacing: 0.13em;
+}
+.image-loading { background-color: #eeece6; }
+.image-fallback small { font-family: 'DM Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0; }

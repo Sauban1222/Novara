@@ -1,0 +1,12 @@
+.shop-section { scroll-margin-top: 20px; background: var(--color-paper); }
+.shop-heading { display: flex; align-items: end; justify-content: space-between; }
+.filter-error { margin: 15px 0; color: var(--color-error); font-size: 0.8rem; }
+.catalog-notice { padding: 24px 0; color: var(--color-muted); font-size: 0.85rem; }
+.catalog-notice--error { color: var(--color-error); }
+.featured-section { background: #fff; }
+.new-arrivals-section { background: #f2f0eb; }
+.section-heading-row { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
+.underlined-link { display: inline-flex; align-items: center; gap: 9px; padding: 0 0 6px; border: 0; border-bottom: 1px solid var(--color-ink); background: transparent; cursor: pointer; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; }
+.underlined-link:hover { border-color: var(--color-gold); color: #8c7040; }
+.new-arrivals-link { flex: none; }
+@media (max-width: 600px) { .section-heading-row { align-items: flex-start; flex-direction: column; } .new-arrivals-link { margin-top: -8px; } }

@@ -1,0 +1,20 @@
+.product-details { padding-block: 35px 90px; }
+.back-link { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 27px; color: var(--color-muted); font-size: 0.75rem; }
+.back-link:hover { color: var(--color-ink); }
+.product-details-layout { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.8fr); gap: clamp(38px, 8vw, 110px); align-items: center; }
+.product-details-image img, .product-details-image .image-fallback { width: 100%; max-height: 750px; aspect-ratio: 0.88; object-fit: cover; }
+.product-details-copy { max-width: 480px; padding-block: 32px; }
+.product-details-copy h1 { margin: 0; font-family: var(--font-serif); font-size: clamp(2.5rem, 4.8vw, 4rem); font-weight: 500; letter-spacing: -0.035em; line-height: 1.08; }
+.details-price { display: flex; align-items: center; gap: 10px; margin: 24px 0; font-size: 1.2rem; font-weight: 600; }
+.details-price del { color: var(--color-muted); font-size: 0.9rem; font-weight: 400; }
+.details-description { max-width: 430px; color: var(--color-muted); font-size: 0.9rem; line-height: 1.8; }
+.availability { margin: 23px 0 13px; color: var(--color-success); font-size: 0.76rem; font-weight: 600; }
+.availability.is-out { color: var(--color-error); }
+.details-actions { display: flex; gap: 12px; }
+.details-actions .button { flex: 1; }
+.product-feedback { display: flex; min-height: 30px; align-items: center; gap: 7px; color: var(--color-success); font-size: 0.76rem; }
+.details-note { display: flex; justify-content: space-between; gap: 10px; padding-top: 18px; border-top: 1px solid var(--color-border); color: var(--color-muted); font-size: 0.68rem; }
+.not-found { display: flex; min-height: 440px; align-items: flex-start; justify-content: center; flex-direction: column; }
+.not-found > p:not(.eyebrow) { color: var(--color-muted); }
+.not-found .button { margin-top: 14px; }
+@media (max-width: 760px) { .product-details-layout { grid-template-columns: 1fr; gap: 12px; } .product-details-image img { max-height: 630px; } .product-details-copy { max-width: none; padding-block: 20px 0; } }

@@ -1,0 +1,12 @@
+.newsletter-section { padding-block: 76px; background: #eeeae1; }
+.newsletter-inner { display: grid; grid-template-columns: 1fr minmax(300px, 440px); align-items: center; gap: 50px; }
+.newsletter-inner h2 { margin: 0; font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 500; line-height: 1.14; }
+.newsletter-inner > div > p:last-child { margin: 14px 0 0; color: var(--color-muted); font-size: 0.84rem; }
+.newsletter-input { display: flex; height: 52px; border-bottom: 1px solid #99948a; }
+.newsletter-input input { flex: 1; min-width: 0; border: 0; background: transparent; font-size: 0.83rem; outline: none; }
+.newsletter-input button { display: grid; width: 46px; place-items: center; border: 0; background: transparent; cursor: pointer; }
+.newsletter-input button:hover { color: var(--color-gold-text); }
+.newsletter-status { min-height: 34px; margin: 12px 0 0; color: var(--color-muted); font-size: 0.7rem; line-height: 1.5; }
+.newsletter-status.is-success { color: var(--color-success); }
+.newsletter-status.is-error { color: var(--color-error); }
+@media (max-width: 700px) { .newsletter-inner { grid-template-columns: 1fr; gap: 27px; } .newsletter-section { padding-block: 58px; } }

@@ -1,0 +1,17 @@
+.category-section { background: #f2f0eb; }
+.category-heading { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 33px; }
+.category-intro { max-width: 320px; margin: 0 0 4px; color: var(--color-muted); font-size: 0.86rem; line-height: 1.7; }
+.category-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.category-card { position: relative; min-width: 0; height: clamp(280px, 34vw, 425px); overflow: hidden; padding: 0; border: 0; background: #d8d4cd; color: white; cursor: pointer; text-align: left; }
+.category-card img, .category-card .image-fallback { width: 100%; height: 100%; object-fit: cover; transition: transform 550ms cubic-bezier(.2,.65,.3,1); }
+.category-card:hover img { transform: scale(1.045); }
+.category-card.is-selected { outline: 2px solid var(--color-gold); outline-offset: 3px; }
+.category-overlay { position: absolute; inset: 0; background: linear-gradient(0deg, rgb(13 13 13 / 67%) 0%, rgb(13 13 13 / 0%) 64%); }
+.category-card-copy { position: absolute; right: 21px; bottom: 21px; left: 21px; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 7px; }
+.category-number { grid-column: span 2; color: rgb(255 255 255 / 75%); font-size: 0.65rem; letter-spacing: 0.11em; }
+.category-card-copy strong { font-family: var(--font-serif); font-size: clamp(1.35rem, 2vw, 1.8rem); font-weight: 500; }
+.category-link { display: flex; align-items: center; gap: 3px; font-size: 0.67rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.category-clear { display: block; margin: 19px auto 0; padding: 7px; border: 0; background: transparent; color: var(--color-muted); cursor: pointer; font-size: 0.73rem; text-decoration: underline; }
+@media (max-width: 1000px) { .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 800px) { .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .category-card { height: 360px; } }
+@media (max-width: 520px) { .category-heading { align-items: flex-start; flex-direction: column; } .category-grid { gap: 10px; } .category-card { height: 255px; } .category-card-copy { right: 12px; bottom: 14px; left: 12px; grid-template-columns: minmax(0, 1fr) auto; } .category-card-copy strong { min-width: 0; font-size: 1.35rem; } .category-link { grid-column: 1 / -1; justify-self: start; font-size: 0.58rem; } }

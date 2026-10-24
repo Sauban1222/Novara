@@ -1,0 +1,22 @@
+.hero { position: relative; display: flex; min-height: clamp(590px, 68vw, 790px); align-items: center; overflow: hidden; background: #544b40; color: white; }
+.hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; }
+.hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgb(17 17 17 / 72%) 0%, rgb(17 17 17 / 42%) 44%, rgb(17 17 17 / 5%) 100%); }
+.hero-content { position: relative; padding-block: 100px; }
+.hero-kicker { display: flex; align-items: center; gap: 12px; margin: 0 0 25px; color: #f1e7d3; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; }
+.hero-kicker::before { width: 28px; height: 1px; background: #d0b67e; content: ''; }
+.hero h1 { max-width: 720px; margin: 0; font-family: var(--font-serif); font-size: clamp(3.7rem, 8.5vw, 7.4rem); font-weight: 500; letter-spacing: -0.05em; line-height: 0.96; }
+.hero h1 em { color: #e6d3a8; font-weight: 500; }
+.hero-copy { max-width: 430px; margin: 27px 0 33px; color: rgb(255 255 255 / 91%); font-size: 0.98rem; line-height: 1.8; }
+.hero-actions { display: flex; align-items: center; gap: 27px; flex-wrap: wrap; }
+.hero-text-link { display: inline-flex; align-items: center; min-height: 44px; border-bottom: 1px solid rgb(255 255 255 / 62%); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; }
+.hero-text-link:hover { border-color: var(--color-gold); color: #ead9b1; }
+.hero-scroll { position: absolute; right: max(32px, calc((100vw - var(--content-width)) / 2)); bottom: 32px; display: flex; align-items: center; gap: 10px; color: white; font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase; }
+@media (max-width: 700px) {
+  .hero { min-height: 680px; align-items: flex-end; }
+  .hero-image { object-position: 58% center; }
+  .hero-shade { background: linear-gradient(0deg, rgb(17 17 17 / 80%) 0%, rgb(17 17 17 / 30%) 68%, rgb(17 17 17 / 8%) 100%); }
+  .hero-content { padding-block: 0 105px; }
+  .hero h1 { font-size: clamp(3.45rem, 15vw, 5.5rem); }
+  .hero-copy { max-width: 360px; font-size: 0.9rem; }
+  .hero-scroll { display: none; }
+}

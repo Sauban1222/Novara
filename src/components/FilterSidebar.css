@@ -1,0 +1,29 @@
+.shop-controls { display: flex; align-items: center; gap: 12px; padding: 18px 0 26px; border-bottom: 1px solid var(--color-border); flex-wrap: wrap; }
+.shop-search { display: flex; width: min(230px, 100%); min-height: 42px; align-items: center; gap: 9px; padding: 0 11px; border: 1px solid var(--color-border); background: white; }
+.shop-search > svg { flex: none; color: var(--color-muted); }
+.shop-search input { width: 100%; min-width: 0; border: 0; outline: none; font-size: 0.76rem; }
+.shop-search button { display: grid; width: 24px; height: 24px; flex: none; place-items: center; border: 0; background: transparent; cursor: pointer; }
+.shop-filter { display: flex; min-height: 42px; align-items: center; gap: 8px; padding: 0 11px; border: 1px solid var(--color-border); background: white; }
+.shop-filter label, .price-filter legend { color: var(--color-muted); font-size: 0.67rem; }
+.shop-filter select { max-width: 142px; border: 0; background: transparent; font-size: 0.73rem; outline: none; }
+.price-filter { display: flex; min-width: 0; min-height: 42px; align-items: center; gap: 6px; margin: 0; padding: 0 10px; border: 1px solid var(--color-border); background: white; }
+.price-filter legend { float: left; margin-right: 7px; padding: 0; }
+.price-filter input { width: 62px; padding: 4px 0; border: 0; outline: none; font-size: 0.72rem; }
+.price-filter > span { color: var(--color-muted); }
+.collection-filters { display: flex; min-height: 42px; align-items: center; gap: 14px; margin: 0; padding: 0; border: 0; }
+.collection-filters label { display: flex; align-items: center; gap: 6px; color: var(--color-muted); font-size: 0.72rem; cursor: pointer; white-space: nowrap; }
+.collection-filters input { accent-color: var(--color-ink); }
+.shop-result-count { margin-left: auto; color: var(--color-muted); font-size: 0.72rem; }
+.clear-filters { padding: 5px; border: 0; background: transparent; color: var(--color-muted); cursor: pointer; font-size: 0.69rem; text-decoration: underline; }
+@media (max-width: 700px) {
+  .shop-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+  .shop-search { width: 100%; grid-column: 1 / -1; }
+  .shop-filter { min-width: 0; justify-content: space-between; gap: 5px; padding-inline: 7px; }
+  .collection-filters { grid-column: 1 / -1; justify-content: space-between; gap: 8px; }
+  .shop-filter select { width: 0; min-width: 0; max-width: none; flex: 1; }
+  .price-filter { min-width: 0; justify-content: space-between; gap: 3px; padding-inline: 7px; }
+  .price-filter legend { margin-right: 2px; }
+  .price-filter input { width: min(32px, 10vw); max-width: 32px; }
+  .shop-result-count { margin-left: 0; }
+  .clear-filters { justify-self: end; }
+}

@@ -1,0 +1,20 @@
+.product-card { min-width: 0; }
+.product-image-wrap { position: relative; overflow: hidden; background: #eeece6; }
+.product-image-wrap > a:first-child { display: block; overflow: hidden; }
+.product-image-wrap img, .product-image-wrap .image-fallback { width: 100%; aspect-ratio: 0.78; object-fit: cover; transition: transform 550ms cubic-bezier(.2,.65,.3,1); }
+.product-card:hover .product-image-wrap img, .product-card:focus-within .product-image-wrap img { transform: scale(1.045); }
+.product-badge, .product-sale { position: absolute; top: 13px; padding: 6px 9px; background: white; color: var(--color-ink); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.product-badge { left: 12px; }
+.product-sale { right: 12px; background: var(--color-gold); color: white; }
+.product-view { position: absolute; right: 12px; bottom: 12px; display: grid; width: 36px; height: 36px; place-items: center; background: white; transition: background 150ms ease, color 150ms ease; }
+.product-view:hover { background: var(--color-ink); color: white; }
+.product-info { padding-top: 16px; }
+.product-meta { display: flex; align-items: center; justify-content: space-between; color: var(--color-muted); font-size: 0.65rem; letter-spacing: 0.05em; text-transform: uppercase; }
+.product-info h3 { min-height: 2.7em; margin: 9px 0 8px; font-family: var(--font-serif); font-size: 1.12rem; font-weight: 500; line-height: 1.35; }
+.product-info h3 a:hover { color: #8e7545; }
+.product-price { display: flex; align-items: center; gap: 9px; font-size: 0.82rem; font-weight: 600; }
+.product-price del { color: var(--color-muted); font-size: 0.73rem; font-weight: 400; }
+.product-add { display: flex; width: 100%; min-height: 42px; align-items: center; justify-content: center; gap: 7px; margin-top: 14px; border: 1px solid #d8d4cb; background: transparent; cursor: pointer; font-size: 0.67rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: background 180ms ease, color 180ms ease, border-color 180ms ease; }
+.product-add:hover:not(:disabled) { border-color: var(--color-ink); background: var(--color-ink); color: white; }
+.product-add:disabled { color: #888; cursor: not-allowed; }
+.product-card-feedback { display: block; min-height: 18px; padding-top: 5px; color: var(--color-success); font-size: 0.65rem; line-height: 1.35; }
