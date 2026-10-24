@@ -8,19 +8,19 @@ import './CartDrawer.css'
 
 export default function CartDrawer({ open, onClose }) {
   const { items, subtotal, setQuantity, removeItem, message } = useCart()
-  const closeRef = useRef(null)
-  const panelRef = useRef(null)
+  const closeRef = useRef<HTMLButtonElement | null>(null)
+  const panelRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     if (!open) return undefined
-    const previous = document.activeElement
+    const previous = document.activeElement instanceof HTMLElement ? document.activeElement : null
     document.body.style.overflow = 'hidden'
     closeRef.current?.focus()
     const handleKey = (event) => {
       if (event.key === 'Escape') onClose()
       if (event.key !== 'Tab' || !panelRef.current) return
-      const focusable = [...panelRef.current.querySelectorAll('button, a[href], input')]
-        .filter((element) => !element.disabled)
+      const focusable = Array.from(panelRef.current.querySelectorAll('button, a[href], input'))
+        .filter((element): element is HTMLElement => element instanceof HTMLElement)
       if (focusable.length === 0) return
       const first = focusable[0]
       const last = focusable[focusable.length - 1]

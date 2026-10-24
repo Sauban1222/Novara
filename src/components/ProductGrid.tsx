@@ -1,7 +1,7 @@
 import ProductCard from './ProductCard'
 import './ProductGrid.css'
 
-export default function ProductGrid({ products, emptyTitle = 'No pieces found', emptyMessage = 'Try adjusting your search or filters to discover more of the collection.', onClear }) {
+export default function ProductGrid({ products, emptyTitle = 'No pieces found', emptyMessage = 'Try adjusting your search or filters to discover more of the collection.', onClear = undefined }) {
   if (products.length === 0) {
     return (
       <div className="product-empty" role="status">

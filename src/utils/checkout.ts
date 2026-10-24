@@ -1,5 +1,15 @@
-export function validateCheckoutForm(form) {
-  const errors = {}
+export interface CheckoutForm {
+  fullName: string
+  email: string
+  address: string
+  city: string
+  postalCode: string
+}
+
+export type CheckoutErrors = Partial<Record<keyof CheckoutForm, string>>
+
+export function validateCheckoutForm(form: CheckoutForm): CheckoutErrors {
+  const errors: CheckoutErrors = {}
   if (!form.fullName.trim()) errors.fullName = 'Enter your full name.'
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) errors.email = 'Enter a valid email address.'
   if (!form.address.trim()) errors.address = 'Enter a delivery address.'

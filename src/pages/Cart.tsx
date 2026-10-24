@@ -4,15 +4,16 @@ import { ArrowLeft, CircleCheck, Minus, Plus, Trash2 } from 'lucide-react'
 import { useCart } from '../hooks/useCart'
 import { formatPrice } from '../utils/formatPrice'
 import { validateCheckoutForm } from '../utils/checkout'
+import type { CheckoutErrors, CheckoutForm } from '../utils/checkout'
 import ImageWithFallback from '../components/ImageWithFallback'
 import './Cart.css'
 
-const initialForm = { fullName: '', email: '', address: '', city: '', postalCode: '' }
+const initialForm: CheckoutForm = { fullName: '', email: '', address: '', city: '', postalCode: '' }
 
 export default function Cart() {
   const { items, subtotal, setQuantity, removeItem, clearCart, message } = useCart()
   const [form, setForm] = useState(initialForm)
-  const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState<CheckoutErrors>({})
   const [checkoutComplete, setCheckoutComplete] = useState(false)
   const submitting = useRef(false)
   const itemCount = items.reduce((sum, item) => sum + item.quantity, 0)
@@ -107,7 +108,7 @@ export default function Cart() {
             </div>
             <div className="checkout-field">
               <label htmlFor="address-field">Delivery address *</label>
-              <textarea id="address-field" name="address" autoComplete="street-address" rows="2" required value={form.address} onChange={updateField} aria-invalid={Boolean(errors.address)} aria-describedby={errors.address ? 'checkout-address-error' : undefined} />
+              <textarea id="address-field" name="address" autoComplete="street-address" rows={2} required value={form.address} onChange={updateField} aria-invalid={Boolean(errors.address)} aria-describedby={errors.address ? 'checkout-address-error' : undefined} />
               {errors.address && <span className="field-error" id="checkout-address-error">{errors.address}</span>}
             </div>
             <div className="checkout-field">
