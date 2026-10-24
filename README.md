@@ -5,6 +5,8 @@ ARROWSTACK Frontend Development Internship
 
 NOVARA is a responsive, editorial-style fashion storefront prototype. Shoppers can discover a local sample catalogue, inspect product details, manage a persistent demo bag, and validate a simulated checkout. It does not process payments, create real orders, transmit customer data, or subscribe email addresses.
 
+**Portfolio:** [devsauban.netlify.com](https://devsauban.netlify.com)
+
 ## Features
 
 - Responsive navigation, mobile menu, category discovery, editorial hero, and image fallbacks.
